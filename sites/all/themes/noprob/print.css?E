@@ -1,0 +1,21 @@
+/* $Id: print.css,v 1.1.4.3.2.1 2008/12/28 02:44:37 eric3 Exp $ */
+/**
+ * @file
+ * NoProb print style sheet for Drupal 5.x & 6.x
+ */
+
+#banner,
+#menu,
+#mission,
+#header,
+#footer,
+#sidebar-left,
+#sidebar-right,
+.breadcrumb,
+.tabs {
+	display: none;
+}
+
+#main {
+	width: 100%;
+}

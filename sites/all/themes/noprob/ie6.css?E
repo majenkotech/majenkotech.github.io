@@ -1,0 +1,26 @@
+/* $Id: ie6.css,v 1.1.2.4 2008/12/28 02:44:37 eric3 Exp $ */
+/**
+ * @file
+ * NoProb IE6-specific style sheet for Drupal 6.x
+ */
+
+* html #wrapper {
+	height: auto !important;
+	height: 100%;
+}
+
+* html ul.links a.over {
+	background-color: #a9a9a9;
+}
+
+* html ul.links ul.show {
+	display: block;
+}
+
+* html ul.sublinks a:hover {
+	background-color: #f4f4f4;
+}
+
+* html .help p {
+	margin-top: 0;
+}

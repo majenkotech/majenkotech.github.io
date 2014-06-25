@@ -1,0 +1,611 @@
+/* $Id: style.css,v 1.5.2.2.2.5 2008/12/28 02:44:37 eric3 Exp $ */
+/**
+ * @file
+ * NoProb style sheet for Drupal 6.x
+ *
+ * Colour reference
+ * text:          #303030
+ * titles:        #101010
+ * background:    #f4f4f4
+ * sidebar:       #fbfbfb
+ * banner:        #79a3c1
+ * light blue:    #336699
+ * medium blue:   #000088
+ * dark blue:     #000033
+ * light gray:    #dddddd
+ * medium gray:   #bbbbbb
+ * dark gray:     #a9a9a9
+ * red:           #660000
+ * brown:         #333300
+ */
+
+/* General elements
+------------------------------ */
+html {
+	font-size: 100.01%;							/* routes around several browser bugs */
+	height: 100%;
+	overflow-y: scroll;
+}
+
+body {
+	background: #f4f4f4 url('background.gif') center top repeat-y;
+	color: #303030;
+	font-family: Verdana, Helvetica, Tahoma, Arial, sans-serif;
+	font-size: 11px;
+	height: 100%;
+	line-height: 1.45em;						/* for a target line height of 16px */
+	margin: 0 auto auto auto;
+	padding: 0;
+}
+
+p {
+	margin: 0.725em 0 1.45em 0;
+	text-align: justify;
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1em;
+	margin: 0.76em 0 0 0;
+}
+
+h2 {
+	font-size: 1.55em;
+	line-height: 1em;
+	margin: 1.28em 0 0 0;
+}
+
+h3 {
+	font-size: 1.27em;
+	line-height: 1em;
+	margin: 1.8em 0 0 0;
+}
+
+h4 {
+	font-size: 1.17em;
+	line-height: 1em;
+	margin: 2.05em 0 0 0;
+}
+
+h5 {
+	font-size: 1.09em;
+	line-height: 1em;
+	margin: 2.2em 0 0 0;
+}
+
+h6 {
+	font-size: 1em;
+	line-height: 1em;
+	margin: 2.5em 0 0 0;
+}
+
+a,
+a:link,
+a:visited {
+	color: #000088;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #336699;
+}
+
+a:active {
+	color: #000033;
+}
+
+dd {
+	margin-bottom: 0.4em;
+}
+
+tbody {
+	border: none;
+}
+
+input,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+	margin-top: 0.4em;
+}
+
+
+/* Main layout
+------------------------------ */
+#wrapper {
+	background-color: white;
+	margin: 0 auto;
+	min-height: 100%;
+	width: 900px;
+}
+
+#middle {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+
+/* Top region
+------------------------------ */
+#banner {
+	background-color: #79a3c1;
+	color: white;
+	padding: 11px 20px 12px 20px;
+}
+
+#banner a {
+	color: inherit;
+	font-weight: normal;
+}
+
+#banner .logo {
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+#banner .site-name {
+	font-size: 2.1em;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 0;
+}
+
+#banner .site-slogan {
+	font-style: italic;
+	margin: 0;
+	padding: 0;
+}
+
+#search {
+	float: right;
+	margin: 17px 0 6px 0;
+}
+
+
+/* Menu bar links
+------------------------------ */
+#menu {
+	background-color: #dddddd;
+	border-bottom: 2px solid #a9a9a9;
+	font-size: 1.1em;
+	height: 1.2em;
+	line-height: 1.2em;
+	padding: 0 8px 0 8px;
+}
+
+#menu a,
+#menu a:link {
+	color: black;
+	display: block;
+	font-family: Verdana, Helvetica, Tahoma, Arial, sans-serif;
+	font-size: 0.95em;
+	padding: 0 10px;
+}
+
+#menu a:hover {
+	color: #336699;
+}
+
+#menu a:active {
+	color: #000033;
+}
+
+#menu li.active a.active {
+	background-color: #a9a9a9;
+}
+
+#menu li.active-trail>a {
+	background-color: #a9a9a9;
+}
+
+#primary-links {
+	float: left;
+}
+
+#tertiary-links {
+	float: right;
+}
+
+#primary-links li,
+#tertiary-links li {
+	float: left;
+}
+
+#primary-links>li,
+#tertiary-links>li {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	padding: 0;
+}
+
+
+/* Drop-down menus
+------------------------------ */
+ul.links>li.haschildren:hover {
+	background-color: #a9a9a9;
+}
+
+ul.links li.haschildren:hover>ul.sublinks {
+	display: block;
+}
+
+ul.links ul.sublinks {
+	background-color: #dddddd;
+	border: 1px solid #a9a9a9;
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 12em;
+}
+
+ul.links ul.sublinks li {
+	border-bottom: 1px solid #a9a9a9;
+	line-height: 1.6em;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+ul.links ul.sublinks li.last {
+	border-bottom: none;
+}
+
+ul.links ul.sublinks li:hover {
+	background-color: #f4f4f4;
+}
+
+ul.links ul.sublinks li.haschildren>a:after {
+	content: "\0020\00BB";
+}
+
+#tertiary-links ul.sublinks {
+	width: 10em;
+}
+
+#primary-links ul.sublinks li ul.sublinks {
+	left: 100%;
+	top: 2px;
+}
+
+#tertiary-links ul.sublinks li ul.sublinks {
+	right: 100%;
+	top: 2px;
+}
+
+
+/* Header
+------------------------------ */
+#header {
+	background-color: #fbfbfb;
+	color: #333300;
+	padding: 4px 7px 0 9px;
+}
+
+
+/* Sidebars
+------------------------------ */
+.sidebar {
+	background-color: #fbfbfb;
+	color: #333300;
+	margin: 0;
+	vertical-align: top;
+	width: 160px;
+}
+
+#sidebar-left {
+	padding: 0 7px 5px 9px;
+}
+
+#sidebar-right {
+	padding: 0 7px 5px 9px;
+}
+
+.sidebar a {
+	color: #660000;
+}
+
+.sidebar a:hover {
+	color: #000033;
+}
+
+.sidebar a:active {
+	color: #660000;
+}
+
+.sidebar a.active {
+	font-weight: bold;
+}
+
+.sidebar .block {
+	margin-bottom: 1em;
+}
+
+.sidebar .block h2 {
+	color: #336699;
+	font-size: 1.4em;
+	margin-bottom: 0.4em;
+	margin-top: 0.6em;
+}
+
+.sidebar .block .content {
+	text-align: left;
+}
+
+
+/* Main content
+------------------------------ */
+#main {
+	padding: 2px 10px 0 10px;
+	vertical-align: top;
+}
+
+#main .title {
+	background-color: #f4f4f4;
+	color: #101010;
+	line-height: 1.4em;
+	margin: 5px 0 9px 0;
+	padding: 0 0.3em;
+}
+
+#main .content li {
+	line-height: 1.6em;
+}
+
+#main table {
+	width: 100%;
+}
+
+#main table thead th,
+#main table tbody td {						/* should only affect auto-generated tables */
+	font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif;
+	font-size: 1.1em;
+	padding-left: 3px;
+	padding-right: 0.7em;
+}
+
+#main fieldset {
+	background-color: #fbfbfb;
+	margin-top: 0.7em;
+}
+
+#main legend {
+	background-color: #fbfbfb;
+	padding-right: 0.8em;
+}
+
+.content-left #mission,
+.content-left .breadcrumb,
+.content-both #mission,
+.content-both .breadcrumb {
+	padding: 3px 1px 0 0;
+	text-align: right;
+}
+
+.content-right #mission,
+.content-right .breadcrumb {
+	padding: 3px 0 0 1px;
+	text-align: left;
+}
+
+
+/* Footer
+------------------------------ */
+#footer {
+	border-top: 1px solid #a9a9a9;
+	font-family: Helvetica, Arial, Tahoma, Verdana, sans-serif;
+	font-size: 1em;
+	margin: 9px auto 0 auto;
+	padding: 0.5em 0 0.8em 0;
+	text-align: center;
+	width: 96%;
+}
+
+#footer .block {
+	text-align: left;
+}
+
+#secondary-links {
+	font-weight: bold;
+	margin-bottom: 0.4em;
+}
+#secondary-links li {
+	border-left: 1px solid #a9a9a9;
+	border-right: 1px solid #a9a9a9;
+	margin: 0 0.07em;
+}
+
+
+/* Meta regions
+------------------------------ */
+.meta {
+	display: block;
+	margin: 0.725em 0 1.45em 0;
+}
+
+.meta .submitted {
+	color: #666666;
+	padding-right: 1em;
+}
+
+.meta .meta-links {
+	float: right;
+	padding-left: 1em;
+	text-align: right;
+}
+
+.meta .meta-links li.comment_forbidden {
+	display: block;
+}
+
+.meta .terms {
+	font-family: "Courier New", Courier, "Andale Mono", Monaco, monospace, sans-serif;
+	font-weight: bold;
+	line-height: 1.8em;
+	text-align: left;
+}
+
+.meta .terms a {
+	color: #441d4f;
+}
+
+.meta .terms li {
+	background-color: #e9e7ff;
+}
+
+
+/* Images
+------------------------------ */
+.content p img {
+	border: 1px solid #79a3c1;
+	margin: 2px;
+	padding: 3px;
+}
+
+.node .picture,
+.comment .picture {
+	float: right;
+	margin-left: 9px;
+}
+
+.node .picture img {
+	height: 5.2em;
+}
+
+.comment .picture img {
+	height: 4.6em;
+}
+
+
+/* Comments
+------------------------------ */
+#comments h2 {
+	margin: 1em 0 0.2em 0;
+}
+
+#comments form {
+	margin: 0 0 1em 0;
+}
+
+.comment {
+	border: 1px solid #bbbbbb;
+	margin: 0.5em 0 0 0;
+	padding: 0.5em;
+}
+
+.comment h3 {
+	display: inline;
+	margin: 0 0 -0.3em 0;
+}
+
+.comment .new {
+	color: red;
+	font-size: 0.95em;
+	font-weight: bold;
+	margin-left: 0.5em;
+}
+
+.comment .signature {
+	font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif;
+}
+
+.comment .meta {
+	margin-bottom: 0;
+}
+
+
+/* Other
+------------------------------ */
+#main table img {									/* mostly for the themes page */
+	margin-bottom: -3px;
+	margin-top: 2px;
+}
+
+#forum {
+	margin-bottom: 1em;
+}
+
+table.sticky-table,
+.admin-panel h3 {
+	margin-top: 0.5em;
+}
+
+.block-region {
+	margin-bottom: 0;
+}
+
+.messages,
+.warning,
+.system-status-report {
+	margin: 1em 0 0.3em 0;
+}
+
+.messages {
+	font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.help,
+.status {
+	background-color: #eeeeee;
+	border: 1px solid #cccccc;
+	margin-bottom: 0.4em;
+	padding: 2px 3px;
+}
+
+.help p {
+	margin: 1.45em 0 0 0;
+}
+
+.help p:first-child {
+	margin-top: 0;
+}
+
+.profile h3 {
+	margin-bottom: 0.5em;
+}
+
+.tips,
+.more-help-link,
+#main fieldset .description,
+.form-item .description {
+	font-family: Helvetica, Arial, Tahoma, Verdana, sans-serif;
+	font-size: 1em;
+	margin-top: 0.4em;
+}
+
+#user-login-form {
+	text-align: left;
+}
+
+#user-login-form li {
+	margin-left: 0.7em;
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	margin-top: 0.3em;
+}
+
+.item-list ul {
+	margin-top: 1em;								/* for the help pages */
+}
+
+.picture+.content>.poll {					/* shifts the poll out from under the user's picture */
+	padding-top: 5.2em;
+}
+
+.flink {
+	font-weight: bold;
+}
+
+.flink:after {
+	vertical-align: super;
+	content: " \21D7";
+}
