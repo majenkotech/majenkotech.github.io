@@ -52,8 +52,9 @@ jQuery.extend(Drupal.settings, { "basePath": "/" });
   <td id="main" class="content-none">
                 <!-- START main content -->
             
+<h1 class="title">Arduino and chipKIT Libraries</h1>
+<hr/>
 <div class="node clear-block">
-    <h1 class="title">Arduino and chipKIT Libraries</h1>
     <h2>MCP23S17 IO Expander</h2>
     <p>The MCP23S17 is a 16 port SPI controlled IO expander.  It has two 8 bit IO ports, 
        and each pin of each port can be individually configured as input or output.  
@@ -69,6 +70,71 @@ jQuery.extend(Drupal.settings, { "basePath": "/" });
     <a href='https://github.com/majenkotech/MCP23S17/blob/master/latex/refman.pdf?raw=true'><img src='pdf.png' style="vertical-align: middle;"/> PDF Manual</a>
     }
 </div>
+
+<hr/>
+<div class="node clear-block">
+    <h2>TFT Library</h2>
+
+    <p>The TFT library is the ultimate library for driving a TFT screen (and also others) from a chipKIT board.  With many very powerful features
+       to get the most out of the power of the chipKIT board, this library is the one you need.  Currently the library supports TFT screens based on:<p>
+    <ul>
+        <li>BD663474 (240x320)</li>
+        <li>HX8357 (320x480)</li>
+        <li>ILI9340 (240x320)</li>
+        <li>S6D0164 (176x220)</li>
+        <li>SSD1289 (240x3420)</li>
+        <li>SSD1963 (800x480)</li>
+        <li>ST7735 (128x160)</li>
+    </ul>
+    <p>There is also support for:</p>
+    <ul>
+        <li>KS0108 graphical LCDs</li>
+        <li>LED Matrix</li>
+    </ul>
+    <p>The library also has support for &quot;virtual&quot; devices.  These range from memory
+       backed framebuffers (internal SRAM and external SRAM chips), aggregate devices to combine
+       multiple displays into one larger virtual display, etc.</p>
+        
+    <p>There is also touch screen support built in, covering:</p>
+    <ul>
+        <li>XPT2046</li>
+        <li>Analog IO direct connection</li>
+    </ul>
+
+    <p>All these screen drivers can be combined with different IO drivers, including:<p>
+    <ul>
+        <li>SPI (hardware AND software)</li>
+        <li>Parallel Master Port</li>
+        <li>Generic pin assignments</li>
+        <li>Shift registers</li>
+        <li>IO Expanders</li>
+    </ul>
+            
+    <p>The library also boasts extra facilities, such as:</p>
+    <ul>
+        <li>Multiple fonts in many sizes, some with 2-bit depth support for anti-aliasing</li>
+        <li>BMP and RGB565 image drawing routines, at multiple colour depths, and handling alpha channels</li>
+        <li>Extensive colour library using the standard XWindows &quot;rgb.txt&quot; colour names</li>
+    </ul>
+
+    <p>And for you speed junkies there are some special drivers for specific devices to get the
+       highest possible speed out of the system:</p>
+    <ul>
+        <li>PICadillo-35T</li>
+    </ul>
+
+    {
+    <a href='https://github.com/majenkotech/TFT'><img src='github-logo.png' style="vertical-align: middle;"/> To the repo!</a>
+    |
+    <a href='https://github.com/majenkotech/TFT/archive/master/TFT-master.zip'><img src='zip.png' style="vertical-align: middle;"/> Download as a ZIP file</a>
+<!--    |
+    <a href='http://majenkotech.github.io/TFT'><img src='dox.png' style="vertical-align: middle;"/> Doxygen Reference</a>
+    |
+    <a href='https://github.com/majenkotech/TFT/blob/master/latex/refman.pdf?raw=true'><img src='pdf.png' style="vertical-align: middle;"/> PDF Manual</a> -->
+    }
+</div>
+
+
 
 
 
